@@ -61,3 +61,13 @@ Run tests:
 ```
 npm test
 ```
+
+## Resolving Unix-like OS issue
+```
+bower-git pulled as it is, not working on machines with Unix-like OS (Mac, Linux, etc..). It failed with error: env: node\r: No such file or directory. Issue is related with line endings format. Solution taken from [there](https://stackoverflow.com/questions/30344858/node-script-executable-not-working-on-mac-env-node-r-no-such-file-or-directo)
+```
+```
+vim bower-git
+:se ff=unix
+:wq
+```
